@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/third_page.css">
+    <title></title>
+<style>
+@font-face {
+    font-family: 'Raleway';
+  
+    src:
+      /* url('fonts/Raleway-Medium.eot'), */
+      url('fonts/Raleway-Medium.ttf');
+      /* url('fonts/Raleway-Medium.woff'), */
+
+  }
+  @font-face {
+    font-family: 'Rubik';
+  
+    src:
+      /* url('fonts/RubikLight.eot'),
+      url('fonts/RubikLight.otf'), */
+      url('fonts/RubikLight.ttf');
+      /* url('fonts/RubikLight.woff'), */
+  }
+  span{
+    font-family: 'Rubik';
+    font-weight: lighter;
+  }
+  .text{
+    font-family: 'Rubik';
+    
+  }
+  @media (max-width: 1600px)and (min-width: 1000px) {
+
+.footer{
+    position: fixed;
+}}
+
+@media screen and (min-width: 240px) and (max-width: 480px) {
+
+    .text {
+justify-content: center;
+
+flex-direction: column;
+
+}
+
+.me{
+    margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 30px;
+}
+
+
+    #img1,
+    #img2,
+    #img3 {
+        height: 80px;
+
+    }
+
+    .buttons {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 165px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .footer {
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .stand {
+        display: none;
+    }
+}
+
+#tteexxtt{
+  margin-top: 20px;
+color: rgba(71, 53, 111, 1);
+}
+</style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrapper">
+            <header class="header" name="top"><img src="pics/logo_third.svg" class="logo">
+                <div class="buttons">
+                    <a href="first_page.html"><img id="img2" src="pics/eye_blue.svg" onmouseover="setnewimage1()" onmouseout="setoldimage2()"></a>
+                    <a href="fourth_page.html"><img id="img3" src="pics/ear_blue.svg" onmouseover="setnewimage2()" onmouseout="setoldimage3()"></a>
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="content">
+                    <div class="text">
+
+                        <img class="me" src="pics/pic_pics/4.jpg">
+                        <div>
+                        Диана Дера - художница-портретистка, которая находит вдохновение в лицах и их историях. Моя работа - это характеры, эмоции, судьбы, которые я стараюсь передать через свой творческий процесс.
+                        Я всегда увлекалась рисованием портретов, и начала заниматься этим серьезно еще в юности. Я училась в художественной школе, где получила фундаментальное образование и научилась различным техникам и стилям живописи.
+                        Для меня очень важно, чтобы мои портреты вызывали у зрителей не только узнавание, но и эмоции и чувства.
+              </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <span class="stand_foot">© Derelines. Пожалуйста, не используйте без разрешения.</span>
+
+            </footer>
+        </div>
+    </div>
+    </div>
+    <script>
+        function setnewimage1() {
+            document.getElementById("img2").src = "pics/eye_open_blue.svg";
+        }
+        function setnewimage2() {
+            document.getElementById("img3").src = "pics/ear_open_blue.svg";
+        }
+
+        function setoldimage2() {
+            document.getElementById("img2").src = "pics/eye_blue.svg";
+        }
+        function setoldimage3() {
+            document.getElementById("img3").src = "pics/ear_blue.svg";
+        }
+    </script>
+</body>
+
+</html>

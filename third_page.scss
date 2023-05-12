@@ -1,0 +1,217 @@
+$margin_top_stand_foot: 10px;
+$color_stand_foot: rgba(236, 170, 170, 1);
+$height1: 300px;
+$width1: 205px;
+$object-fit_pic: cover;
+$opacity: 0.5;
+$transition: 2s;
+$display_block: block;
+$width2: 100px;
+$height2: 100%;
+$display_flex: flex;
+$fl_d_col: column;
+$scr_b: smooth;
+$m_l_r: auto;
+$fl_d_r: row;
+$just_cont: center;
+$zero: 0;
+$pyatten: 50px;
+$fffff: rgba(231, 252, 255, 1);
+$j_c: space-between;
+$uuuu: rgba(255, 137, 129, 0.24);
+$f_s: 25px;
+$padp: 40px;
+$j_c1:flex-start;
+$twten:20px;
+$fourxsto: 400px;
+$threeten:30px;
+$wrap:wrap;
+$ggggg:80px;
+$rrrrrrrrrr:150px;
+
+.auto_flex {
+    display: $display_flex;
+    margin: $m_l_r;
+    left: $zero;
+    right: $zero;
+
+}
+
+//наследование
+.header {
+    @extend .auto_flex;
+    top: $zero;
+    flex-direction: $fl_d_r;
+    background: $fffff;
+    justify-content: $j_c;
+
+    #img1,
+    #img2,
+    #img3 {
+        height: $ggggg;
+    }
+}
+
+.footer {
+    @extend .auto_flex;
+    bottom: $zero;
+    flex-direction: $fl_d_col;
+    background-color: $uuuu;
+}
+
+.stand_foot {
+    margin-top: $margin_top_stand_foot;
+    margin-bottom: $margin_top_stand_foot;
+    color: $color_stand_foot;
+}
+
+.pic {
+    height: $height1;
+    width: $width1;
+    object-fit: $object-fit_pic;
+}
+
+.pic:hover {
+    opacity: $opacity;
+    transition: $transition;
+}
+
+.logo {
+    display: $display_block;
+    width: $rrrrrrrrrr;
+}
+
+// вложенность
+html {
+    height: $height2;
+    scroll-behavior: $scr_b;
+
+    body {
+        display: $display_flex;
+        flex-direction: $fl_d_col;
+        height: $height2;
+
+        a {
+            margin-left: $m_l_r;
+            margin-right: $m_l_r;
+        }
+
+        .container {
+            display: $display_flex;
+            flex-direction: $fl_d_r;
+            justify-content: $just_cont;
+            column-gap: $margin_top_stand_foot;
+
+            span.stand_foot {
+                margin-left: $m_l_r;
+                margin-right: $m_l_r;
+                text-align: $just_cont;
+            }
+
+            .wrapper {
+                height: 100vh;
+                width: $height2;
+
+                .content {
+                    padding: $padp;
+                    font-size: $f_s;
+
+                    .button_pr,
+                    .button_n {
+                        width: $pyatten;
+                     
+                    }
+                    .text{
+                        display: $display_flex;
+                        text-align: $just_cont;
+                        justify-content: $j_c1;
+                    
+                    }
+                }
+            }
+        }
+    }
+}
+
+* {
+    padding: $zero;
+    margin: $zero;
+}
+.stand{
+    margin-left: $m_l_r;
+    margin-right: $m_l_r;
+}
+.buttons{
+    display: $display_flex;
+    align-content: $just_cont;
+    justify-content: $just_cont;
+}
+.me{
+    width: $fourxsto;
+    height: $fourxsto;
+    margin-left: $padp;
+    margin-right: $twten;
+
+}
+.buttons{
+    flex-wrap: $wrap;
+}
+@media (max-width: 1600px)and (min-width: 769px) {
+    .logo{
+        margin-top: $margin_top_stand_foot;
+        margin-bottom: $margin_top_stand_foot;
+        margin-left: $pyatten;
+    }
+    .buttons{
+        margin-top: $margin_top_stand_foot;
+        margin-bottom: $margin_top_stand_foot;
+        margin-right: $pyatten;
+    }
+    .stand_foot{
+        margin-top: $threeten;
+        margin-bottom: $threeten;
+    }
+
+}
+@media (max-width: 768px)and (min-width: 481px) {
+
+.me{
+    margin-left: $m_l_r;
+    margin-right: $m_l_r;
+}
+.stand_foot{
+    margin-top: $threeten;
+    margin-bottom: $threeten;
+}
+
+.text{
+    justify-content: $just_cont;
+    flex-direction: $fl_d_col;
+}
+
+.logo {
+    margin-top: $margin_top_stand_foot;
+    margin-bottom: $margin_top_stand_foot;
+    margin-left: $pyatten;
+}
+
+.buttons{
+    margin-top: $margin_top_stand_foot;
+    margin-bottom: $margin_top_stand_foot;
+    margin-right: $pyatten;
+}
+
+}
+
+@media (max-width: 768px)and (min-width: 481px) {
+    .stand{
+        margin-top: $twten;
+        margin-bottom: $margin_top_stand_foot;
+        font-size: $twten;
+    }
+    .pic{
+        height: $height1;
+        margin-right: -15px;
+        object-fit: cover;
+    }
+}

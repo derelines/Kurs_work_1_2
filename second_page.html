@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style2.css"> -->
+    <title></title>
+    <style>
+          @font-face {
+    font-family: 'Rubik';
+  
+    src:
+      /* url('fonts/RubikLight.eot'),
+      url('fonts/RubikLight.otf'), */
+      url('fonts/RubikLight.ttf');
+      /* url('fonts/RubikLight.woff'), */
+  }
+      .stand_foot {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgba(215, 220, 179, 1);
+}
+
+.pic {
+    height: 300px;
+    width: 205px;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.pic:hover {
+    opacity: 0.5;
+    transition: 2s;
+}
+
+.logo {
+    display: block;
+    width: 150px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+a {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.effect-text-three {
+
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    display: inline-block;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#slider-container {
+    display: none;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+}
+
+/* .main {
+padding: 50px 0 50px 0; /* padding for header and footer 
+} */
+.header {
+    /*position: fixed;*/
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(229, 123, 148, 0.15);
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.footer {
+    /*position: fixed;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(228, 232, 204, 0.34);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.content {
+    padding: 40px;
+    font-size: 20px;
+}
+
+
+#img1,
+#img2,
+#img3 {
+    height: 80px;
+
+}
+
+.button_pr{
+    width: 35px;
+} 
+
+.button_n{
+    width: 35px;
+} 
+
+
+.stand {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.buttons {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+h5 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.stand_foot {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.text {
+    display: block;
+    text-align: center;
+}
+
+.effect-text-three {
+    font-weight: 100;
+    overflow: hidden;
+    position: relative;
+    -moz-transition: all .4s;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    cursor: pointer;
+
+}
+
+.effect-text-three .figcaption {
+    background-color: rgba(0, 160, 150, 0);
+    width: 205px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9900;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.effect-text-three span {
+    width: 200px;
+    height: 0px;
+    text-transform: uppercase;
+    font-size: 11px;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0px;
+    left: 0;
+    z-index: 9910;
+    -moz-transition: all .4s;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    margin-top: 120px;
+    text-align: center;
+}
+
+@media (max-width: 1600px)and (min-width: 769px) {
+    .effect-text-three:hover span {
+        top: 0;
+        height: 60px;
+        color: #ffffff;
+    }
+
+    .effect-text-three:hover .figcaption {
+        display: block;
+        background-color: rgba(133, 133, 133, 0.525);
+    }
+
+    .logo {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+    }
+
+    .buttons {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+}
+
+
+@media (max-width: 768px)and (min-width: 481px) {
+    .logo {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+    }
+
+    .buttons {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+
+    .stand {
+
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .pic {
+        height: 300px;
+        margin-right: -15px;
+        object-fit: cover;
+    }
+
+    .effect-text-three:active span {
+        top: 0;
+        height: 60px;
+        color: #ffffff;
+    }
+
+    .effect-text-three:active .figcaption {
+        display: block;
+        background-color: rgba(133, 133, 133, 0.525);
+    }
+
+    .effect-text-three:focus span {
+        top: 0;
+        height: 60px;
+        color: #ffffff;
+    }
+
+    .effect-text-three:focus .figcaption {
+        display: block;
+        background-color: rgba(133, 133, 133, 0.525);
+    }
+
+}
+
+@media screen and (min-width: 240px) and (max-width: 480px) {
+
+    #img1,
+    #img2,
+    #img3 {
+        height: 80px;
+
+    }
+
+    .buttons {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 165px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .footer {
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #image {
+        height: 280px;
+        width: 170px;
+        object-fit: cover;
+    }
+
+    .text {
+        display: none;
+    }
+
+    #slider-container {
+        display: flex;
+        align-items: center;
+        /*strtetch*/
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .stand {
+        display: none;
+    }
+}
+
+#tteexxtt{
+  margin-top: 20px;
+color: rgba(16, 89, 176, 1);
+   text-align: center;
+}
+.some_text{
+    text-align: center;
+    color: rgba(155, 180, 207, 1);
+    margin-bottom: 20px;
+    font-family: 'Rubik';
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrapper">
+            <header class="header" name="top"><img src="pics/logo_fourth.png" class="logo">
+                <div class="buttons">
+
+
+                    <a href="first_page.html"><img id="img1" src="pics/eye_pink.svg" onmouseover="setnewimage()"
+                        onmouseout="setoldimage1()"></a>
+                        <a href="third_page.html"><img id="img2" src="pics/lips_pink.svg" onmouseover="setnewimage1()"
+                        onmouseout="setoldimage2()"></a>
+                        <a href="fourth_page.html"><img id="img3" src="pics/ear_pink.svg" onmouseover="setnewimage2()"
+                        onmouseout="setoldimage3()"></a>
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="content">
+                    <div class="some_text">
+                        Привет! Здесь размещены некоторые мои наброски.<br>
+                        Надеюсь, вам будет интересно.<br>
+                        Приятного просмотра!
+                    </div>
+
+                    <div id="slider-container">
+                        <div id="previous"><img class="button_pr" src="./pics/button1_left.png" /></div>
+                        <img id="image" src="./pics/pic_sketch/photo_2023-03-19_23-33-54 (3).jpg" />
+                        <div id="next"><img class="button_n" src="./pics/button1_right.png" /></div>
+                        <div id="tteexxtt">
+                          <span>ДЕВУШКА С ХВОСТИКОМ</span>
+                       </div>
+                    </div>
+                    <div class="text">
+
+
+                        <div class="effect-text-three" tabindex="1">
+                            <img class="pic" src="./pics/pic_sketch/photo_2023-03-19_23-33-54 (3).jpg">
+                            <div class="figcaption">
+                                <span>ДЕВУШКА С ХВОСТИКОМ</span>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="effect-text-three" tabindex="1">
+                            <img class="pic" src="./pics/pic_sketch/photo_2023-03-19_23-33-54 (2).jpg">
+                            <div class="figcaption">
+                                <span>МОЯ АЛИНА</span>
+                            </div>
+                        </div>
+
+
+                        <div class="effect-text-three" tabindex="1">
+                            <img class="pic" src="./pics/pic_sketch/photo_2023-03-19_23-33-54.jpg">
+                            <div class="figcaption">
+                                <span>КУЧЕРЯВЫЙ МАЛЬЧИК</span>
+                            </div>
+                        </div>
+                        <div class="effect-text-three" tabindex="1">
+                            <img class="pic" src="./pics/pic_sketch/photo_2023-03-19_23-33-54 (5).jpg">
+                            <div class="figcaption">
+                                <span>ТЕХЁН</span>
+                            </div>
+                        </div>
+                        <div class="effect-text-three" tabindex="1">
+                            <img class="pic" src="./pics/pic_sketch/photo_2023-03-19_23-33-52.jpg">
+                            <div class="figcaption">
+                                <span>НАБРОСОК ХЁНДЖИНА</span>
+                            </div>
+                        </div>
+
+                        <div class="effect-text-three" tabindex="1">
+                            <img class="pic" src="./pics/pic_sketch/photo_2023-03-19_23-33-53 (2).jpg">
+                            <div class="figcaption">
+                                <span>ОСТРЫЙ ВЗГЛЯД</span>
+                            </div>
+                        </div>
+
+
+                        <div class="effect-text-three" tabindex="1">
+                            <img class="pic" src="./pics/pic_sketch/photo_2023-03-19_23-33-55 (3).jpg">
+                            <div class="figcaption">
+                                <span>МИНХО В РАКУРСЕ</span>
+                            </div>
+                        </div>
+                        <div class="effect-text-three" tabindex="1">
+                            <img class="pic" src="./pics/pic_sketch/photo_2023-03-19_23-33-53.jpg">
+                            <div class="figcaption">
+                                <span>ОСТРЫЙ ВЗГЛЯД</span>
+                            </div>
+                        </div>
+                        <div class="effect-text-three" tabindex="1">
+                            <img class="pic" src="./pics/pic_sketch/photo_2023-03-19_23-33-55 (4).jpg">
+                            <div class="figcaption">
+                                <span>ПОКАЖИ МНЕ БАБОЧЕК</span>
+                            </div>
+                        </div>
+                        <div class="effect-text-three" tabindex="1">
+                            <img class="pic" src="./pics/pic_sketch/photo_2023-03-19_23-33-54 (6).jpg">
+                            <div class="figcaption">
+                                <span>ДЖЕНТЕЛЬМЕН</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="stand">
+                    <a href="#top" class="stand_foot" style=" text-decoration:none"> Вернуться к началу </a>
+                </div>
+                <h5 class="stand_foot">© Derelines. Пожалуйста, не используйте без разрешения.</h5>
+
+            </footer>
+        </div>
+    </div>
+    </div>
+    <script>
+       //массив картинок
+       const imagesUrls = [
+            "./pics/pic_sketch/photo_2023-03-19_23-33-54 (3).jpg",
+            "./pics/pic_sketch/photo_2023-03-19_23-33-54 (2).jpg",
+            "./pics/pic_sketch/photo_2023-03-19_23-33-54.jpg",
+            "./pics/pic_sketch/photo_2023-03-19_23-33-54 (5).jpg",
+            "./pics/pic_sketch/photo_2023-03-19_23-33-52.jpg",
+            "./pics/pic_sketch/photo_2023-03-19_23-33-53 (2).jpg",
+            "./pics/pic_sketch/photo_2023-03-19_23-33-55 (3).jpg",
+            "./pics/pic_sketch/photo_2023-03-19_23-33-53.jpg",
+            "./pics/pic_sketch/photo_2023-03-19_23-33-55 (4).jpg",
+            "./pics/pic_sketch/photo_2023-03-19_23-33-54 (6).jpg"
+        ];
+        const TextPics = [
+            "ДЕВУШКА С ХВОСТИКОМ",
+            "МОЯ АЛИНА",
+            "КУЧЕРЯВЫЙ МАЛЬЧИК",
+            "ТЕХЁН",
+            "НАБРОСОК ХЁНДЖИНА",
+            "ОСТРЫЙ ВЗГЛЯД",
+            "МИНХО В РАКУРСЕ",
+            "ОСТРЫЙ ВЗГЛЯД",
+            "ПОКАЖИ МНЕ БАБОЧЕК",
+            "ДЖЕНТЕЛЬМЕН"
+        ];
+
+
+        // индекс для отслеживания текущей картинки
+        let currentIndex = 0;
+        //для подписи
+        let currentIndex1=0
+
+        // Устанавливаем начальное изображение
+        const imageElement = document.querySelector("#image");
+        imageElement.src = imagesUrls[currentIndex];
+
+           // Устанавливаем нач подпись
+           const textElement = document.querySelector("#tteexxtt");
+        textElement.innerHTML = TextPics[currentIndex1];
+
+        // Функция, отвечающая за переход к следующему изображению
+        function nextImageHandler() {
+            // Увеличиваем индекс текущего изображения
+            currentIndex++;
+            currentIndex1++;
+            // Если текущий индекс больше длины массива изображений, устанавливаем его обратно в 0
+            if (currentIndex >= imagesUrls.length) {
+                currentIndex = 0;
+            };
+
+            if (currentIndex1 >= TextPics.length) {
+                currentIndex1 = 0;
+            }
+            // Показываем следующее изображение
+            imageElement.src = imagesUrls[currentIndex];
+            textElement.innerHTML = TextPics[currentIndex1];
+        }
+
+        //  Функция, отвечающая за переход к предыдущему изображению
+        function previousImageHandler() {
+            // Уменьшаем индекс
+            currentIndex--;
+            currentIndex1--;
+
+            // Если текущий индекс меньше 0, устанавливаем его на последний индекс массива изображений
+            if (currentIndex < 0) {
+                currentIndex = imagesUrls.length - 1;
+            }
+            if (currentIndex1 < 0) {
+                currentIndex1 = TextPics.length - 1;
+            }
+
+            // Показываем предыдущее изображение
+            imageElement.src = imagesUrls[currentIndex];
+            textElement.innerHTML = TextPics[currentIndex1];
+        }
+
+        // Устанавливаем обработчики изображений на кнопки
+        const nextButton = document.querySelector("#next");
+        nextButton.addEventListener("click", nextImageHandler);
+
+        const previousButton = document.querySelector("#previous");
+        previousButton.addEventListener("click", previousImageHandler);
+
+
+
+        function setnewimage() {
+            document.getElementById("img1").src = "pics/eye_open_pink.svg";
+        }
+        function setnewimage1() {
+            document.getElementById("img2").src = "pics/lips_open_pink.svg";
+        }
+        function setnewimage2() {
+            document.getElementById("img3").src = "pics/ear_open_pink.svg";
+        }
+        function setoldimage1() {
+            document.getElementById("img1").src = "pics/eye_pink.svg";
+        }
+        function setoldimage2() {
+            document.getElementById("img2").src = "pics/lips_pink.svg";
+        }
+        function setoldimage3() {
+            document.getElementById("img3").src = "pics/ear_pink.svg";
+        }
+    </script>
+</body>
+
+</html>

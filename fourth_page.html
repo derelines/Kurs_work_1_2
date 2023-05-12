@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style2.css"> -->
+    <title></title>
+    <style>
+@font-face {
+    font-family: 'Raleway';
+  
+    src:
+      /* url('fonts/Raleway-Medium.eot'), */
+      url('fonts/Raleway-Medium.ttf');
+      /* url('fonts/Raleway-Medium.woff'), */
+
+  }
+  @font-face {
+    font-family: 'Rubik';
+  
+    src:
+      /* url('fonts/RubikLight.eot'),
+      url('fonts/RubikLight.otf'), */
+      url('fonts/RubikLight.ttf');
+      /* url('fonts/RubikLight.woff'), */
+  }
+  body{    font-family: 'Rubik';}
+.some_text{
+
+    color: rgba(71, 53, 111, 1);
+    font-size: 50px;
+}
+        .logo {
+            display: block;
+            width: 150px;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 10px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper {
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* .main {
+		padding: 50px 0 50px 0; /* padding for header and footer 
+	} */
+        .header {
+            /*position: fixed;*/
+            display: flex;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(228, 232, 204, 0.34);
+            margin: auto;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .footer {
+            /*position: fixed;*/
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(228, 232, 204, 0.34);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .content {
+            padding: 40px;
+ 
+        }
+
+        #img1,
+        #img2,
+        #img3 {
+            height: 80px;
+
+        }
+
+        .stand {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
+
+        span.stand_foot {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .some_text {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 50px;
+        }
+
+        .stand_foot {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: rgba(215, 220, 179, 1)
+        }
+
+        .text {
+            display: flex;
+         flex-direction: column;
+         align-items: center;
+        
+}
+
+
+        .fio, .email, .soo{
+            border: 1px solid #ededed;
+            padding-top: 20px;
+      
+            padding-left: 20px;
+            color: rgba(215, 220, 179, 1);
+            border-spacing: 0px;
+            margin-right: -5px;
+            font-size: 20px;
+        }
+  
+
+        ::placeholder{
+            color: #d1d1d1;
+                         border-collapse: collapse;
+                         border-spacing: 0px;
+        }
+        fieldset{
+            border: 0px;
+            text-align: center;
+        }
+       button{
+        background-color: rgba(228, 232, 204, 0.34);
+        color: rgba(215, 220, 179, 1);
+        border: none;
+        font-size: 20px;
+       }
+       @media (max-width: 1600px)and (min-width: 1000px) {
+
+.footer{
+    position: fixed;
+}}
+
+        @media (max-width: 1600px)and (min-width: 769px) {
+
+            #img4,
+            #img5,
+            #img6 {
+                height: 75px;
+            }
+
+            .buttons_es{
+                display: flex;
+                flex-direction: row;
+                margin-top: 50px;
+            }
+
+            .soo{
+margin-top: -1px;
+padding-bottom: 100px;
+padding-right: 512px;
+}
+
+.fio, .email{
+    padding-bottom: 20px;
+    padding-right: 120px;
+}
+
+            .logo {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 50px;
+            }
+
+            .buttons {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-right: 50px;
+            }
+
+            button{
+                margin-top: 30px;
+    padding: 15px 100px;
+}
+        }
+
+
+        @media (max-width: 768px)and (min-width: 481px) {
+
+            #img4,
+            #img5,
+            #img6 {
+                height: 75px;
+            }
+
+            .buttons_es{
+                display: flex;
+                flex-direction: row;
+                margin-top: 50px;
+            }
+
+            .soo{
+                margin-top: -1px;
+padding-bottom: 130px;
+padding-right: 372px;
+}
+
+.fio, .email{
+    padding-bottom: 20px;
+    padding-right: 50px;
+}
+
+            .logo {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 50px;
+            }
+
+            .buttons {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-right: 50px;
+            }
+
+            .stand {
+
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-size: 20px;
+            }
+
+            button{
+                margin-top: 50px;
+    padding: 15px 100px;
+}
+
+
+        }
+
+        @media screen and (min-width: 240px) and (max-width: 480px) {
+
+            .soo{
+margin-top: -1px;
+padding-bottom: 120px;
+
+}
+
+            #img4,
+            #img5,
+            #img6 {
+                height: 50px;
+            }
+
+            .buttons_es{
+                display: flex;
+                flex-direction: row;
+                margin-top: 20px;
+            }
+
+.fio, .email{
+    padding-bottom: 50px;
+ 
+}
+            .some_text {
+                margin-bottom: 25px;
+                line-height: 30px;
+            }
+
+            #img1,
+            #img2,
+            #img3 {
+                height: 80px;
+            }
+
+            .buttons {
+                margin-bottom: 10px;
+            }
+
+            .logo {
+                margin-top: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 165px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-content: center;
+                width: 100%;
+            }
+
+            .footer {
+                font-size: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            #image {
+                height: 350px;
+                width: 220px;
+                object-fit: cover;
+            }
+
+            .stand {
+                display: none;
+            }
+
+            button{
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+}
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="wrapper">
+            <header class="header" name="top"><img src="pics/logo_first.svg" class="logo">
+                <div class="buttons">
+
+                        <a href="first_page.html"><img id="img2" src="pics/eye_green.svg" onmouseover="setnewimage1()"
+                        onmouseout="setoldimage2()"></a>
+                        <a href="third_page.html"><img id="img3" src="pics/lips_green.svg" onmouseover="setnewimage2()"
+                        onmouseout="setoldimage3()"></a>
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="content">
+                    <div class="some_text">
+                        <span>Контакты</span>
+                    </div>
+                    <div class="text">
+
+                        <form id="myForm" method="post" action="/fourth_page">
+                            <fieldset>
+                            <fieldset>
+                            <input type="text" class="fio" name="fio" placeholder="Имя" required>
+                            <input type="text" class="email" name="email" placeholder="Еmail"  required>
+                            </fieldset>
+                            <fieldset>
+                            <input type="text" class="soo" name="soo" placeholder="Сообщение"  required>
+                            </fieldset>
+                            <button type="submit">Отправить</button>
+                            </fieldset>
+                        </form>
+                        <div class="buttons_es">
+
+
+                            <a href="https://twitter.com/derelines"><img id="img4" src="pics/twi.svg"></a>
+                            <a href="https://www.instagram.com/derelines/"><img id="img5" src="pics/inst.svg"></a>
+                            <a href="https://vk.com/derelines"><img id="img6" src="pics/vk.svg"></a>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <span class="stand_foot">© Derelines</span>
+
+            </footer>
+        </div>
+    </div>
+    </div>
+    <script>
+
+        function setnewimage1() {
+            document.getElementById("img2").src = "pics/eye_open_green.svg";
+        }
+        function setnewimage2() {
+            document.getElementById("img3").src = "pics/lips_open_green.svg";
+        }
+
+        function setoldimage2() {
+            document.getElementById("img2").src = "pics/eye_green.svg";
+        }
+        function setoldimage3() {
+            document.getElementById("img3").src = "pics/lips_green.svg";
+        }
+    </script>
+</body>
+
+</html>
